@@ -1,7 +1,8 @@
 class Barnabas < Formula
   homepage "https://github.com/anicholson/barnabas"
-  url "https://github.com/anicholson/barnabas/archive/v0.3.0.tar.gz"
-  sha256 "6397215126f144f75730a4f6ad8ae659f1e0ff468bc64f2b00418ecf30a62759"
+  url "https://github.com/anicholson/barnabas/archive/v0.3.1.tar.gz"
+  sha256 "c1e032ebee3365b908d2df35b52f88f0c58c54fe9b82b642fe01fdfa46ebf8ec"
+
   head "https://github.com/anicholson/barnabas.git", revision: "master"
 
   depends_on "crystal-lang" => :build
