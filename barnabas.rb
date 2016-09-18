@@ -1,7 +1,7 @@
 class Barnabas < Formula
   homepage "https://github.com/anicholson/barnabas"
   url "https://github.com/anicholson/barnabas/archive/v0.4.0.tar.gz"
-  sha256 "219587f38452a6f6f6f6a11305b6097275f213ca8e0aa1600d58aeb442934bb6"
+  sha256 "a21a9aed505485fe97dfe510582be0d7935c541f929b6181b265998533c8245c"
 
   head "https://github.com/anicholson/barnabas.git", revision: "master"
 
