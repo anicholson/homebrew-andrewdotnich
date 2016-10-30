@@ -13,7 +13,7 @@ class Barnabas < Formula
     bin.install "barnabas"
     share.install "script/suggest.bash", "script/suggest.zsh"
 
-    mkdir "-p", "~/.barnabas"
+    mkdir_p  "~/.barnabas"
     system "crystal", "src/setup.cr"
 
     ohai <<-EOM
