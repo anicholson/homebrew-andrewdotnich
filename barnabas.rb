@@ -16,21 +16,15 @@ class Barnabas < Formula
     mkdir_p  "~/.barnabas"
     system "crystal", "src/setup.cr"
 
-    ohai <<-EOM
+    oh1 "Installation complete!"
+    ohai " If you use bash for your shell, add"
+    ohai "source #{share}/suggest.bash"
+    ohai "to your .bashrc file."
 
-    Installation complete! If you use bash for your shell, add
+    ohai "If you use ZSH instead, add"
 
-    source #{share}/suggest.bash
-
-    to your .bashrc file.
-
-    If you use ZSH instead, add
-
-    source #{share}/suggest.zsh
-
-    to your .zshrc file.
-
-    EOM
+    ohai "source #{share}/suggest.zsh"
+    ohai "to your .zshrc file."
   end
 
   test do
