@@ -11,9 +11,26 @@ class Barnabas < Formula
     system "crystal", "deps", "update"
     system "crystal", "build", "src/barnabas.cr"
     bin.install "barnabas"
+    share.install "script/suggest.bash", "script/suggest.zsh"
 
     mkdir "-p", "~/.barnabas"
     system "crystal", "src/setup.cr"
+
+    ohai <<-EOM
+
+    Installation complete! If you use bash for your shell, add
+
+    source #{share}/suggest.bash
+
+    to your .bashrc file.
+
+    If you use ZSH instead, add
+
+    source #{share}/suggest.zsh
+
+    to your .zshrc file.
+
+    EOM
   end
 
   test do
