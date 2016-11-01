@@ -1,11 +1,12 @@
 class Barnabas < Formula
   desc "Encourage your friends from your terminal"
   homepage "https://github.com/anicholson/barnabas"
-  url "https://github.com/anicholson/barnabas/archive/v1.0.0-rc.1.tar.gz"
-  sha256 "fd81a69abeda35f749b9855e13b07edb9d2f23695a7016b33387073226316c6c"
+  url "https://github.com/anicholson/barnabas/archive/v1.0.0-rc.3.tar.gz"
+  sha256 "a98e92e7953325c2f0c16c314df201c800834ad0a9d8c2519433f26f990ddfcb"
   head "https://github.com/anicholson/barnabas.git", :revision => "master", :using => :git
 
   depends_on "crystal-lang" => :run
+  depends_on "sqlite" => :run
 
   def install
     system "crystal", "deps", "update"
@@ -13,7 +14,7 @@ class Barnabas < Formula
     bin.install "barnabas"
     share.install "script/suggest.bash", "script/suggest.zsh"
 
-    mkdir_p  "~/.barnabas"
+    mkdir_p "~/.barnabas"
     system "crystal", "src/setup.cr"
 
     oh1 "Installation complete!"
@@ -28,6 +29,6 @@ class Barnabas < Formula
   end
 
   test do
-    system "barnabas", "-h"
+    system "#{bin}/barnabas", "-h"
   end
 end
