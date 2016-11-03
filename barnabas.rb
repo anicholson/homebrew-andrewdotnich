@@ -1,8 +1,8 @@
 class Barnabas < Formula
   desc "Encourage your friends from your terminal"
   homepage "https://github.com/anicholson/barnabas"
-  url "https://github.com/anicholson/barnabas/archive/v1.0.0-rc.4.tar.gz"
-  sha256 "9eec74defa3793a6eff8abc57d226c05d911325b1634c727cf47f82fd60a2956"
+  url "https://github.com/anicholson/barnabas/archive/v1.0.0-rc.5.tar.gz"
+  sha256 "c571f809c24101ba22a875f3d824b3206990bcb01cdf2764b3e5bf2bc53ef4c0"
   head "https://github.com/anicholson/barnabas.git", :revision => "master", :using => :git
 
   depends_on "crystal-lang" => :run
