@@ -5,8 +5,8 @@ class Barnabas < Formula
   sha256 "c571f809c24101ba22a875f3d824b3206990bcb01cdf2764b3e5bf2bc53ef4c0"
   head "https://github.com/anicholson/barnabas.git", :revision => "master", :using => :git
 
-  depends_on "crystal-lang" => :run
-  depends_on "sqlite" => :run
+  depends_on "crystal-lang"
+  depends_on "sqlite"
 
   def install
     system "crystal", "deps", "update"
